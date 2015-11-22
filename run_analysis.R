@@ -12,14 +12,14 @@ library(plyr)
 # Merging training and test set to create one data set
 ###############################################################
 # test data
-x_test <- read.table("./data/UCI HAR Dataset/test/X_test.txt")
-subject_test <- read.table("./data/UCI HAR Dataset/test/subject_test.txt")
-y_test <- read.table("./data/UCI HAR Dataset/test/y_test.txt")
+x_test <- read.table("./test/X_test.txt")
+subject_test <- read.table("./test/subject_test.txt")
+y_test <- read.table("./test/y_test.txt")
 
 # training data
-x_train <- read.table("./data/UCI HAR Dataset/train/X_train.txt")
-subject_train <- read.table("./data/UCI HAR Dataset/train/subject_train.txt")
-y_train <- read.table("./data/UCI HAR Dataset/train/y_train.txt")
+x_train <- read.table("./train/X_train.txt")
+subject_train <- read.table("./train/subject_train.txt")
+y_train <- read.table("./train/y_train.txt")
 
 #create x data set
 x_data <- rbind(x_train, x_test)
@@ -35,7 +35,7 @@ subject_data <- rbind(subject_train, subject_test)
 #Extracts only the measurements on the mean and standard deviation for each measurement
 ###############################################################
 #subset of columns
-labels <- read.table("./data/UCI HAR Dataset/features.txt")
+labels <- read.table("./features.txt")
 
 #get only the lables with mean or std in their names
 mean_and_std <- grep("-(mean|std)\\(\\)", labels[,2])
