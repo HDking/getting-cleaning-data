@@ -1,9 +1,3 @@
-#1. a tidy data set as described below
-#2. link to a Github repo with your script for performing the analysis
-#3. Code book that describes the variables, the data and any transformations or 
-# or work that you performed to clean called CodeBook.md
-#Also include a README.md explain how all of the scripts work and how they are connected. 
-
 library(dplyr)
 library(plyr)
 
